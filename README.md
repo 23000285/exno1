@@ -1,5 +1,4 @@
-# EXPERIMENT 1:
-Data Cleaning Process
+# EXPERIMENT 1: DATA CLEANING PROCESS
 
 ## AIM:
 To read the given data and perform data cleaning and save the cleaned data to a file.
