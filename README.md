@@ -31,7 +31,7 @@ df
 ## Output:
 ![alt text](<Output images/image.png>)
 
-## DISPLAY THE INFORMATION ABOUT CSV AND RUN THE BASIC DATA ANALYSIS FUNCTIONS:
+### DISPLAY THE INFORMATION ABOUT CSV AND RUN THE BASIC DATA ANALYSIS FUNCTIONS:
 ```python
 df.info()
 ```
@@ -39,21 +39,21 @@ df.info()
 ## Output:
 ![alt text](<Output images/image-1.png>)
 
-## CHECK OUT NULL VALUES IN DATA SET USING FUNCTION:
+### CHECK OUT NULL VALUES IN DATA SET USING FUNCTION:
 ```python
 df.isnull()
 ```
 ## Output:
 ![alt text](<Output images/image-2.png>)
 
-## DISPLAY THE SUM ON NULL VALUES IN EACH ROWS:
+### DISPLAY THE SUM ON NULL VALUES IN EACH ROWS:
 ```python
 df.isnull().sum()
 ```
 ## Output:
 ![alt text](<Output images/image-3.png>)
 
-## DROP NULL VALUES(ANY):
+### DROP NULL VALUES(ANY):
 ```python
 df.dropna(how='any')
 ```
@@ -61,7 +61,7 @@ df.dropna(how='any')
 ## Output:
 ![alt text](<Output images/image-4.png>)
 
-## DROP NULL VALUES WITH THE SPECIFIC ROWS(ANY):
+### DROP NULL VALUES WITH THE SPECIFIC ROWS(ANY):
 ```python
 df_any_row = df.dropna(axis=0, how='any')
 df_any_row
@@ -69,7 +69,7 @@ df_any_row
 ## Output:
 ![alt text](<Output images/image-6.png>)
 
-## DROP NULL VALUES WITH THE SPECIFIC COLUMN(ANY):
+### DROP NULL VALUES WITH THE SPECIFIC COLUMN(ANY):
 ```python
 df_any_column = df.dropna(axis=1, how='any')
 df_any_column
@@ -79,7 +79,7 @@ df_any_column
 ![alt text](<Output images/image-7.png>)
 
 
-## DROP NULL VALUES(ALL):
+### DROP NULL VALUES(ALL):
 ```python
 df.dropna(how='all')
 ```
@@ -87,7 +87,7 @@ df.dropna(how='all')
 ## Output:
 ![alt text](<Output images/image-5.png>)
 
-## DROP NULL VALUES WITH SPECIFIC ROWS(ALL):
+### DROP NULL VALUES WITH SPECIFIC ROWS(ALL):
 ```python
 df_any_ROW = df.dropna(axis=0, how='all')
 df_any_ROW
@@ -95,7 +95,7 @@ df_any_ROW
 ## Output:
 ![alt text](<Output images/image-8.png>)
 
-## DROP NULL VALUES WITH SPECIFIC COLUMN(ALL):
+### DROP NULL VALUES WITH SPECIFIC COLUMN(ALL):
 ```python
 df_any_COLUMN = df.dropna(axis=1, how='all')
 df_any_COLUMN
@@ -103,7 +103,7 @@ df_any_COLUMN
 ## Output:
 ![alt text](<Output images/image-9.png>)
 
-## FILL NULL VALUES WITH CONSTANT VALUE "O":
+### FILL NULL VALUES WITH CONSTANT VALUE "O":
 ```python
 df_filled = df.fillna("O")
 df_filled
@@ -111,9 +111,9 @@ df_filled
 ## Output:
 ![alt text](<Output images/image-10.png>)
 
-#FILL NULL VALUES WITH ffill or bfill METHOD
+## FILL NULL VALUES WITH ffill or bfill METHOD
 
-## FORWARD FILL(ffill):
+### FORWARD FILL(ffill):
 ```python
 df_ffill = df.fillna(method='ffill')
 df_ffill
@@ -121,16 +121,16 @@ df_ffill
 ## Output:
 ![alt text](<Output images/image-11.png>)
 
-## Backward Fill (bfill):
+### Backward Fill (bfill):
 ```python
 df_bfill = df.fillna(method='bfill')
 df_bfill
 ```
 
-## Output:
+### Output:
 ![alt text](<Output images/image-12.png>)
 
-## CALCULATE MEAN VALUE OF All THE COLUMN AND FILL IT WITH NULL VALUES:
+### CALCULATE MEAN VALUE OF All THE COLUMN AND FILL IT WITH NULL VALUES:
 ```python
 mn=df.mean()
 print(mn)
@@ -141,7 +141,7 @@ print(df)
 ## Output:
 ![alt text](<Output images/image-13.png>)
 
-## DROP DUPLICATES 
+### DROP DUPLICATES 
 ```python
 df.drop_duplicates(inplace=True)
 df
@@ -149,7 +149,7 @@ df
 ## Output:
 ![alt text](<Output images/image-14.png>)
 
-## DROP THE NULL VALUES AND PERMANTLY REMOVED THE SPECIFIC ROW:
+### DROP THE NULL VALUES AND PERMANTLY REMOVED THE SPECIFIC ROW:
 ```python
 df.dropna(axis=0,how='any',inplace=True)
 df
@@ -158,7 +158,7 @@ df
 ## Output:
 ![alt text](<Output images/image-15.png>)
 
-## IT SHOWS THE DUPLICATED VALUES IN THE OVERALL DATAFRAME:
+### IT SHOWS THE DUPLICATED VALUES IN THE OVERALL DATAFRAME:
 ```python
 df.duplicated()
 ```
@@ -166,7 +166,7 @@ df.duplicated()
 ## Output:
 ![alt text](<Output images/image-16.png>)
 
-## PRINT THE COLUMN OF DOB:
+### PRINT THE COLUMN OF DOB:
 ```python
 df['DOB']
 ```
@@ -174,7 +174,7 @@ df['DOB']
 ## Output:
 ![alt text](<Output images/image-17.png>)
 
-## TO PRINT THE DATE OF YOUR GIVEN FORMAT:
+### TO PRINT THE DATE OF YOUR GIVEN FORMAT:
 ```python
 x=df['DOB'] = pd.to_datetime(df['DOB'], format=('%Y-%m-%d'))
 x
@@ -183,7 +183,7 @@ x
 ## Output:
 ![alt text](<Output images/image-18.png>)
 
-## CREATE A HEATMAP TO VISUALIZE MISSING VALUES:
+### CREATE A HEATMAP TO VISUALIZE MISSING VALUES:
 ```python
 import pandas as pd
 import seaborn as sns
@@ -192,7 +192,7 @@ sns.heatmap(df.isnull(),yticklabels=False,annot=True)
 ## Output:
 ![alt text](<Output images/image-19.png>)
 
-## IQR(Interquartile Range):
+### IQR(Interquartile Range):
 ```python
 import pandas as pd
 import seaborn as sns
@@ -205,7 +205,7 @@ af
 ## Output:
 ![alt text](<Output images/image-20.png>)
 
-## USE BOXPLOT FUNCTION HERE TO DETECT OUTLIER:
+### USE BOXPLOT FUNCTION HERE TO DETECT OUTLIER:
 ```python
 sns.boxplot(data=af)
 ```
@@ -213,7 +213,7 @@ sns.boxplot(data=af)
 ## Output:
 ![alt text](<Output images/image-21.png>)
 
-## USE SCATTERPLOT FUNCTION HERE TO DETECT OUTLIER:
+### USE SCATTERPLOT FUNCTION HERE TO DETECT OUTLIER:
 ```python
 sns.scatterplot(data=af)
 ```
@@ -221,7 +221,7 @@ sns.scatterplot(data=af)
 ## Output:
 ![alt text](<Output images/image-22.png>)
 
-## IQR METHOD TO FIND THE OUTLIERS VALUES:
+### IQR METHOD TO FIND THE OUTLIERS VALUES:
 ```python
 q1=np.quantile(age,0.25)
 q2=np.quantile(age,0.50)
@@ -247,7 +247,7 @@ print("Outliers:",outliers)
 ## Output:
 ![alt text](<Output images/image-24.png>)
 
-## TO PRINT THE NEAREST VALUES AND OTHERS GIVES NULL VALUES:
+### TO PRINT THE NEAREST VALUES AND OTHERS GIVES NULL VALUES:
 ```python
 af=af[((af>=lower_bound)&(af<=upper_bound))]
 af
@@ -255,28 +255,28 @@ af
 ## Output:
 ![alt text](<Output images/image-23.png>)
 
-## REMOVE OUTLIERS:
+### REMOVE OUTLIERS:
 ```python
 af.dropna()
 ```
 ## Output:
 ![alt text](<Output images/image-25.png>)
 
-## USE BOXPLOT FUNCTION HERE TO CHECK OUTLIER IS REMOVED:
+### USE BOXPLOT FUNCTION HERE TO CHECK OUTLIER IS REMOVED:
 ```python
 sns.boxplot(data=af)
 ```
 ## Output:
 ![alt text](<Output images/image-26.png>)
 
-## USE SCATTERPLOT FUNCTION HERE TO CHECK OUTLIER IS REMOVED:
+### USE SCATTERPLOT FUNCTION HERE TO CHECK OUTLIER IS REMOVED:
 ```python
 sns.scatterplot(data=af)
 ```
 ## Output:
 ![alt text](<Output images/image-27.png>)
 
-## STATS METHOD IS USED TO IMPLEMENT Z SCORE METHOD:
+### STATS METHOD IS USED TO IMPLEMENT Z SCORE METHOD:
 ```python
 from scipy import stats 
 import numpy as np
@@ -302,7 +302,7 @@ print("Outlier in dataset is",outlier)
 ![alt text](<Output images/image-28.png>)
 ![alt text](<Output images/image-29.png>)
 
-## ANOTHER METHOD TO FIND THE Z-SCORE:
+### ANOTHER METHOD TO FIND THE Z-SCORE:
 ```python
 z=np.abs(stats.zscore(data1))
 data1[data1>3]
@@ -311,14 +311,14 @@ data1[data1>3]
 ## Output:
 ![alt text](<Output images/image-35.png>)
 
-## USE BOXPLOT FUNCTION HERE TO DETECT OUTLIER:
+### USE BOXPLOT FUNCTION HERE TO DETECT OUTLIER:
 ```python
 sns.boxplot(data=data)
 ```
 ## Output:
 ![alt text](<Output images/image-30.png>)
 
-## USE SCATTERPLOT FUNCTION HERE TO DETECT OUTLIER
+### USE SCATTERPLOT FUNCTION HERE TO DETECT OUTLIER
 ```python
 sns.scatterplot(data=data)
 ```
@@ -326,7 +326,7 @@ sns.scatterplot(data=data)
 ## Output:
 ![alt text](<Output images/image-31.png>)
 
-## REMOVE THE OUTLIERS:
+### REMOVE THE OUTLIERS:
 ```python
 cleaned_data = [i for i in data if i not in outlier]
 print("Data after removing outliers:", cleaned_data)
@@ -335,7 +335,7 @@ print("Data after removing outliers:", cleaned_data)
 ## Output:
 ![alt text](<Output images/image-32.png>)
 
-## VISUALIZE ORIGINAL DATA WITH A BOXPLOT:
+### VISUALIZE ORIGINAL DATA WITH A BOXPLOT:
 ```python
 plt.figure(figsize=(10, 6))
 sns.boxplot(data=data)
@@ -346,7 +346,7 @@ plt.show()
 ## Output:
 ![alt text](<Output images/image-33.png>)
 
-## VISUALIZE CLEANED DATA WITH A BOXPLOT:
+### VISUALIZE CLEANED DATA WITH A BOXPLOT:
 ```python
 plt.figure(figsize=(10, 6))
 sns.boxplot(data=cleaned_data)
